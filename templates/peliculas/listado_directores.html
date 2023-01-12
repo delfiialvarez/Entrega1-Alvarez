@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} 
+<h1>Listado de directores</h1>
+{% endblock %}
+
+{% block content %}
+<h1>Listado de directores</h1>
+<h2>Agregar director</h2> <a href="/peliculas/crear-directores/" class="btn btn-primary">agregar</a>
+{% for director in directores%}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">{{director.nombre}} {{director.apellido}}</h5>
+        <p class="card-text">Edad: {{director.edad}}</p>
+        <p>Estado: {{director.estado}}</p>
+        <p> </p>
+        <a href="#" class="btn btn-primary">Detalle</a>
+        </div>
+    </div>
+{% endfor%}
+{% endblock %}

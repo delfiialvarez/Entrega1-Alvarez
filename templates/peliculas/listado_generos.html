@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %} 
+<h1>Listado de películas</h1>
+{% endblock %}
+
+{% block content %}
+<h1>Listado de géneros</h1>
+<h2>Agregar genero</h2> <a href="/peliculas/crear-generos/" class="btn btn-primary">Agregar</a>
+{% for genero in generos%}
+    <h3><p>Género: {{genero.nombre}}</p></h3>
+{% endfor%}
+{% endblock %}

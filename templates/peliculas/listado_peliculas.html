@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} 
+<h1>Listado de películas</h1>
+{% endblock %}
+
+{% block content %}
+<h1>Listado de películas</h1>
+<h2>Agregar película</h2> <a href="/peliculas/crear-peliculas/" class="btn btn-primary">crear</a>
+{% for pelicula in peliculas%}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">{{pelicula.nombre}}</h5>
+        <p class="card-text">Duración: {{pelicula.duracion}}</p>
+        <p>Fecha de lanzamiento: {{pelicula.año_de_lanzamiento}}</p>
+        <p>Género: {{pelicula.genero}}</p>
+        <a href="#" class="btn btn-primary">Detalle</a>
+        </div>
+    </div>
+{% endfor%}
+{% endblock %}
